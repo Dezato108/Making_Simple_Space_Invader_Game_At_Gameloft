@@ -1,16 +1,10 @@
 #include <stdio.h>
 #include <iostream>
 using namespace std;
-float n;
 
-bool check(float &n) {
-	if (n == int(n)) return true;
-	return false;
-}
-
-long long factorial(float &n) {
-	if (n == 0) return 1;
-	long long s=1;
+unsigned long long int factorial(int n) {
+	if (n == 0 || n==1) return 1;
+	unsigned long long int s=1;
 	for (int i = 2; i <= n; i++) {
 		s = s * i;
 	}
@@ -18,15 +12,15 @@ long long factorial(float &n) {
 }
 
 int main() {
-		input:
+		int n;
+		
 		cout << "n= ";
 		cin >> n;
-		if (check(n) && (n > 0) && (n <= 20)) {
-			cout << "--> n! = " << factorial(n) << endl;
-		}
-		else {
-			cout << "Invalid number, please re-input !" << endl;
-			goto input;
+		while (n <= 0) {
+			cout << "Please re - enter a valid input"<<endl;
+			cout << "n= ";
+			cin >> n;
 		}		
+		cout << "--> n! = " << factorial(n) << endl;
 		return 0;
 }
