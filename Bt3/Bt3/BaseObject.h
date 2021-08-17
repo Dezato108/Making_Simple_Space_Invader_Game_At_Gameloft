@@ -25,7 +25,7 @@ public:
 	int getpos_x();
 	int getpos_y();
 
-	virtual void move(int x, int y);
+	virtual void move(int x, int y) = 0; //move should be pure virtual
 	void printPosition();
 };
 

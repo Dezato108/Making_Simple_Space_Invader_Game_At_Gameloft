@@ -8,11 +8,9 @@ BaseObject::BaseObject() {
 	this->position_x = 0;
 	this->position_y = 0;
 }
-BaseObject::BaseObject(string id, string name, int x, int y) {
-	this->id = id;
-	this->name = name;
-	this->position_x = x;
-	this->position_y = y;
+BaseObject::BaseObject(string id, string name, int x, int y) : id(id), name(name), position_x(x), position_y(y)
+{
+	//Member initialization
 }
 BaseObject::~BaseObject() {
 	//cout << "Base Object deleted" << endl;
