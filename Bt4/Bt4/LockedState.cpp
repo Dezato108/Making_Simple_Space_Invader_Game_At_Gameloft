@@ -24,5 +24,5 @@ void LockedState::unlock(StateContext* sc)
 	cout << "You unlocked the door" << endl;
 	cout << "Current state of the door : Unlocked and Closed" << endl;
 	sc->changeCurrentState(new ClosedState);
-	delete this;
+	//delete this;
 }

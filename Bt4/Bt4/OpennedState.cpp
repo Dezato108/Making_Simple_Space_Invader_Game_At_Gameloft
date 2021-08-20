@@ -12,7 +12,7 @@ void OpennedState::close(StateContext* sc)
 	cout << "You closed the door" << endl;
 	cout << "Current state of the door : Unlocked and Closed" << endl;
 	sc->changeCurrentState(new ClosedState);
-	delete this;
+	//delete this;
 }
 
 void OpennedState::lock(StateContext* sc)

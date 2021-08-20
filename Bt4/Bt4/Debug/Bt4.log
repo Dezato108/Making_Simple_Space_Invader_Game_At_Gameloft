@@ -1,8 +1,5 @@
 ﻿  ClosedState.cpp
   LockedState.cpp
   OpennedState.cpp
-  Source.cpp
-  StateBase.cpp
-  StateContext.cpp
   Generating Code...
   Bt4.vcxproj -> D:\InternGameProj\Bt4\Bt4\Debug\Bt4.exe
