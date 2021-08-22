@@ -1,0 +1,25 @@
+﻿  GSMenu.cpp
+C:\Users\Admin\Desktop\Gameloft\MiniGameStarter\TrainingFramework\src\GameStates\GSMenu.cpp(62,91): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\Admin\Desktop\Gameloft\MiniGameStarter\TrainingFramework\src\GameStates\GSMenu.cpp(62,57): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xutility(158,77): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2029): message : see reference to function template instantiation 'void std::_Construct_in_place<_Ty,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,const char(&)[14],TextColor,double>(_Ty &,std::shared_ptr<Shader> &,std::shared_ptr<Font> &,const char (&)[14],TextColor &&,double &&) noexcept(false)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2748): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<std::shared_ptr<Shader>&,std::shared_ptr<Font>&,const char(&)[14],TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,const char (&)[14],TextColor &&,double &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2748): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<std::shared_ptr<Shader>&,std::shared_ptr<Font>&,const char(&)[14],TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,const char (&)[14],TextColor &&,double &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+C:\Users\Admin\Desktop\Gameloft\MiniGameStarter\TrainingFramework\src\GameStates\GSMenu.cpp(61): message : see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,const char(&)[14],TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,const char (&)[14],TextColor &&,double &&)' being compiled
+  TrainingFramework.vcxproj -> C:\Users\Admin\Desktop\Gameloft\MiniGameStarter\BIN-Angle\TrainingFramework.exe
