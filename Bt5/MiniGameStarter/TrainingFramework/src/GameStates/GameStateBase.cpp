@@ -7,9 +7,11 @@
 #include "GSMenu.h"
 #include "GSCredit.h"
 #include "GameStatebase.h"
+int GameStateBase::m_keyPressed = 0;
 
 GameStateBase::GameStateBase(StateType stateType) : m_stateType(stateType)
-{}
+{	
+}
 
 std::shared_ptr<GameStateBase> GameStateBase::CreateState(StateType stt)
 {

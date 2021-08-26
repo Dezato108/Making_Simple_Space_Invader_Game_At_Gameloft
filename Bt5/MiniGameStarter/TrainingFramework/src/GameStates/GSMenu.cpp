@@ -16,7 +16,7 @@ GSMenu::~GSMenu()
 void GSMenu::Init()
 {
 	auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
-	auto texture = ResourceManagers::GetInstance()->GetTexture("bg1.tga");
+	auto texture = ResourceManagers::GetInstance()->GetTexture("bg.tga");
 
 	// background
 	auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
@@ -24,11 +24,18 @@ void GSMenu::Init()
 	m_background->Set2DPosition(Globals::screenWidth / 2, Globals::screenHeight / 2);
 	m_background->SetSize(Globals::screenWidth, Globals::screenHeight);
 		
+	// title image
+	texture = ResourceManagers::GetInstance()->GetTexture("gametitle.tga");
+	m_timage = std::make_shared<Sprite2D>(model, shader, texture);
+	m_timage->Set2DPosition(Globals::screenWidth / 2 , Globals::screenHeight / 2 - 150);
+	m_timage->SetSize(600, 300);
+	
+
 	// play button
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_play2.tga");
 	std::shared_ptr<GameButton> button = std::make_shared<GameButton>(model, shader, texture);
-	button->Set2DPosition(Globals::screenWidth / 2, Globals::screenHeight / 2);
-	button->SetSize(150, 150);
+	button->Set2DPosition(Globals::screenWidth / 2, Globals::screenHeight / 2+ 150);
+	button->SetSize(200, 200);
 	button->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PLAY);
 		});
@@ -37,8 +44,9 @@ void GSMenu::Init()
 	// credit button
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_credit.tga");
 	button = std::make_shared<GameButton>(model, shader, texture);
-	button->Set2DPosition(Globals::screenWidth / 2, Globals::screenHeight / 2 + 180);
-	button->SetSize(150, 150);
+	button->Set2DPosition(Globals::screenWidth - 120, 50);
+	//button->Set2DPosition(Globals::screenWidth / 2, Globals::screenHeight / 2 + 180);
+	button->SetSize(50, 50);
 	button->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_CREDIT);
 		});
@@ -61,6 +69,8 @@ void GSMenu::Init()
 	m_textGameName = std::make_shared< Text>(shader, font, "Space Invader", TextColor::RED, 3.0);
 	m_textGameName->Set2DPosition(Globals::screenWidth / 2 - 300 , Globals::screenHeight / 2 - 150);
 	//m_textGameName->Set2DPosition(Vector2(200, 200));
+
+	
 }
 
 void GSMenu::Exit()
@@ -112,9 +122,10 @@ void GSMenu::Update(float deltaTime)
 void GSMenu::Draw()
 {
 	m_background->Draw();
+	m_timage->Draw();
 	for (auto it : m_listButton)
 	{
 		it->Draw();
 	}
-	m_textGameName->Draw();
+	//m_textGameName->Draw();
 }

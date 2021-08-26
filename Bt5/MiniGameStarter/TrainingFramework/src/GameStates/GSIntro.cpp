@@ -14,11 +14,11 @@ void GSIntro::Init()
 {
 	auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
 	auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
-	auto texture = ResourceManagers::GetInstance()->GetTexture("logo1.tga");
+	auto texture = ResourceManagers::GetInstance()->GetTexture("logo2.tga");
 
 	m_logo = std::make_shared<Sprite2D>(model, shader, texture);
 	m_logo->Set2DPosition((float)Globals::screenWidth / 2, (float)Globals::screenHeight / 2);
-	m_logo->SetSize(150, 150);
+	m_logo->SetSize(300, 300);
 }
 
 void GSIntro::Exit()
@@ -54,7 +54,7 @@ void GSIntro::HandleMouseMoveEvents(int x, int y)
 void GSIntro::Update(float deltaTime)
 {
 	m_time += deltaTime;
-	if (m_time > 2)
+	if (m_time > 1)
 	{
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_MENU);
 		m_time = 0;

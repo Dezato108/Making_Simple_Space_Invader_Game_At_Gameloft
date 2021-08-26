@@ -23,7 +23,7 @@ GSCredit::~GSCredit()
 void GSCredit::Init()
 {
 	auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
-	auto texture = ResourceManagers::GetInstance()->GetTexture("bg1.tga");
+	auto texture = ResourceManagers::GetInstance()->GetTexture("bg.tga");
 
 	// background
 	auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
@@ -43,14 +43,14 @@ void GSCredit::Init()
 
 	// text
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
-	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("arialbd.ttf");
-	m_text1 = std::make_shared< Text>(shader, font, "This game was made", TextColor::WHITE, 1.0);
-	m_text1->Set2DPosition((float)Globals::screenWidth/2 -200, (float)Globals::screenHeight / 2);
+	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("arcade.ttf");
+	m_text1 = std::make_shared< Text>(shader, font, "THIS GAME WAS MADE", TextColor::RED, 1.4);
+	m_text1->Set2DPosition((float)Globals::screenWidth/2 -300, (float)Globals::screenHeight / 2);
 	//m_score->Set2DPosition(Vector2(5, 25));
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
 	//std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("arialbd.ttf");
-	m_text2 = std::make_shared< Text>(shader, font, "by Nguyen Hoang Hiep", TextColor::WHITE, 1.0);
-	m_text2->Set2DPosition((float)Globals::screenWidth / 2 - 120, (float)Globals::screenHeight / 2+50);
+	m_text2 = std::make_shared< Text>(shader, font, "BY NGUYEN HOANG HIEP", TextColor::RED, 1.4);
+	m_text2->Set2DPosition((float)Globals::screenWidth / 2 - 250, (float)Globals::screenHeight / 2 + 50);
 }
 
 void GSCredit::Exit()
