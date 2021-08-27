@@ -25,10 +25,10 @@ void GSMenu::Init()
 	m_background->SetSize(Globals::screenWidth, Globals::screenHeight);
 		
 	// title image
-	texture = ResourceManagers::GetInstance()->GetTexture("gametitle.tga");
+	texture = ResourceManagers::GetInstance()->GetTexture("gametil.tga");
 	m_timage = std::make_shared<Sprite2D>(model, shader, texture);
 	m_timage->Set2DPosition(Globals::screenWidth / 2 , Globals::screenHeight / 2 - 150);
-	m_timage->SetSize(600, 300);
+	m_timage->SetSize(700, 300);
 	
 
 	// play button

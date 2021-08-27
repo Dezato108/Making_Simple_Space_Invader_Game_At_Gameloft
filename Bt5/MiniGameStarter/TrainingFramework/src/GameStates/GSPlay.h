@@ -1,5 +1,6 @@
 #pragma once
 #include "GameStateBase.h"
+#include "Invaders.h"
 
 class Sprite2D;
 class Sprite3D;
@@ -26,12 +27,15 @@ public:
 	void	Update(float deltaTime) override;
 	void	Draw() override;
 
+	
+
 private:
 	std::shared_ptr<Sprite2D>	m_background;
 	std::shared_ptr<Sprite2D>	m_player;
-	std::shared_ptr<Sprite2D>	m_invader;
+	
 	std::shared_ptr<Text>		m_score;
+	float m_timeline;
 	std::list<std::shared_ptr<GameButton>>	m_listButton;
-
+	std::vector<std::shared_ptr<Invaders>> m_listInvaders;
 };
 

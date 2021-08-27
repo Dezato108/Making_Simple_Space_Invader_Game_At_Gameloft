@@ -9,8 +9,11 @@
 #include "Sprite3D.h"
 #include "Text.h"
 #include "GameButton.h"
+#include <Invaders.h>
 
-GSPlay::GSPlay()
+
+
+GSPlay::GSPlay() : m_timeline(0)
 {
 }
 
@@ -37,11 +40,18 @@ void GSPlay::Init()
 	m_player->Set2DPosition((float)Globals::screenWidth / 2, (float)Globals::screenHeight-60);
 	m_player->SetSize(60, 50);
 
-	// monster invader
+	// monsters
 	texture = ResourceManagers::GetInstance()->GetTexture("bsauce.tga");
-	m_invader = std::make_shared<Sprite2D>(model, shader, texture);
-	m_invader->Set2DPosition((float)Globals::screenWidth / 2, (float)Globals::screenHeight /2 - 300);
-	m_invader->SetSize(70, 60);
+	auto invader1 = std::make_shared<Invaders>(model, shader, texture);
+	//m_invader->Set2DPosition((float)Globals::screenWidth - (float)Globals::screenWidth + 50, (float)Globals::screenHeight - (float)Globals::screenHeight -30);
+	invader1->Set2DPosition((float)Globals::screenWidth /2, (float)Globals::screenHeight /2);
+	invader1->SetSize(70, 60);
+	m_listInvaders.push_back(invader1);
+
+	auto invader2 = std::make_shared<Invaders>(model, shader, texture);
+	invader2->Set2DPosition((float)Globals::screenWidth / 2+50, (float)Globals::screenHeight / 2);
+	invader2->SetSize(70, 60);
+	m_listInvaders.push_back(invader2);
 
 	// button close
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_x.tga");
@@ -125,13 +135,14 @@ void GSPlay::HandleMouseMoveEvents(int x, int y)
 void GSPlay::Update(float deltaTime){
 	Vector3 currentPos = m_player->GetPosition();
 
+	//handle character's movement
 	if (m_keyPressed & KEY_MOVE_LEFT) {	
 		if (currentPos.x >= 80)
-			m_player->Set2DPosition(Vector2(currentPos.x - 10, currentPos.y));
+			m_player->Set2DPosition(Vector2(currentPos.x - 300 * deltaTime, currentPos.y));
 	}
 	if (m_keyPressed & KEY_MOVE_RIGHT) {		
 		if (currentPos.x <= 1200)
-			m_player->Set2DPosition(Vector2(currentPos.x + 10, currentPos.y));
+			m_player->Set2DPosition(Vector2(currentPos.x + 300 * deltaTime, currentPos.y));
 	}
 	for (auto it : m_listButton)
 	{
@@ -142,9 +153,12 @@ void GSPlay::Update(float deltaTime){
 void GSPlay::Draw()
 {
 	m_background->Draw();
-	m_score->Draw();
+	for (auto i = 0; i<m_listInvaders.size(); i++) {
+		m_listInvaders[i]->Draw();
+	}
+	//m_score->Draw();
 	m_player->Draw();
-	m_invader->Draw();
+	//m_invader->Draw();
 	for (auto it : m_listButton)
 	{
 		it->Draw();
