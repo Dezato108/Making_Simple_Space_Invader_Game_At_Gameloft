@@ -15,7 +15,7 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
           [
               _Ty=Camera
           ]
-C:\Users\Admin\Desktop\Gameloft\MiniGameStarter\TrainingFramework\src\Application.cpp(20): message : see reference to function template instantiation 'std::shared_ptr<Camera> std::make_shared<Camera,int,int,int&,int,int&,float,float,float>(int &&,int &&,int &,int &&,int &,float &&,float &&,float &&)' being compiled
+E:\MiniGameStarter\TrainingFramework\src\Application.cpp(20): message : see reference to function template instantiation 'std::shared_ptr<Camera> std::make_shared<Camera,int,int,int&,int,int&,float,float,float>(int &&,int &&,int &,int &&,int &,float &&,float &&,float &&)' being compiled
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xutility(158,77): warning C4244: 'argument': conversion from '_Ty' to 'GLfloat', possible loss of data
           with
           [
@@ -28,19 +28,19 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
   Camera.cpp
   Sprite3D.cpp
   Model.cpp
-C:\Users\Admin\Desktop\Gameloft\MiniGameStarter\TrainingFramework\src\GameObject\Model.cpp(25,18): warning C4244: 'initializing': conversion from 'std::streamoff' to 'size_t', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameObject\Model.cpp(25,18): warning C4244: 'initializing': conversion from 'std::streamoff' to 'size_t', possible loss of data
   Shader.cpp
   Text.cpp
   Texture.cpp
   GameStateBase.cpp
   GameStateMachine.cpp
   GSIntro.cpp
-C:\Users\Admin\Desktop\Gameloft\MiniGameStarter\TrainingFramework\src\GameStates\GSIntro.cpp(20,86): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-C:\Users\Admin\Desktop\Gameloft\MiniGameStarter\TrainingFramework\src\GameStates\GSIntro.cpp(20,52): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSIntro.cpp(20,86): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSIntro.cpp(20,52): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
   GSMenu.cpp
   GSPlay.cpp
-C:\Users\Admin\Desktop\Gameloft\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(31,92): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-C:\Users\Admin\Desktop\Gameloft\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(31,58): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(31,92): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(31,58): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xutility(158,77): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
           with
           [
@@ -61,8 +61,8 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
           [
               _Ty=Text
           ]
-C:\Users\Admin\Desktop\Gameloft\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(47): message : see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,const char(&)[10],TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,const char (&)[10],TextColor &&,double &&)' being compiled
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(47): message : see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,const char(&)[10],TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,const char (&)[10],TextColor &&,double &&)' being compiled
   TrainingFramework.cpp
   Generating Code...
 Application.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-  TrainingFramework.vcxproj -> C:\Users\Admin\Desktop\Gameloft\MiniGameStarter\BIN-AMD\TrainingFramework.exe
+  TrainingFramework.vcxproj -> E:\MiniGameStarter\BIN-AMD\TrainingFramework.exe

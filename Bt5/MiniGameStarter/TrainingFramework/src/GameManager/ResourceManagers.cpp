@@ -13,9 +13,9 @@ ResourceManagers::ResourceManagers()
 {
 	std::string dataPath = "..\\Data\\";
 	m_ShaderPath = dataPath + "Shaders\\";
+	m_ModelPath = dataPath + "Models\\"; 
 	m_TexturePath = dataPath + "Textures\\";
-	m_ModelsPath = dataPath + "Model\\";
-	m_FontPath = dataPath + "fonts\\";
+	m_FontPath = dataPath + "Fonts\\";
 }
 
 ResourceManagers::~ResourceManagers()
@@ -48,7 +48,7 @@ void ResourceManagers::AddModel(const std::string& name)
 	{
 		return;
 	}
-	std::string path = m_ModelsPath + name;
+	std::string path = m_ModelPath + name;
 	std::shared_ptr<Model> model = std::make_shared<Model>(path, NFG);
 	m_MapModels.insert(std::pair<std::string, std::shared_ptr<Model>>(name, model));
 }
@@ -139,7 +139,7 @@ std::shared_ptr<Model> ResourceManagers::GetModel(const std::string& name)
 	{
 		return it->second;
 	}
-	std::string path = m_ModelsPath + name;
+	std::string path = m_ModelPath + name;
 	std::shared_ptr<Model> model = std::make_shared<Model>(path, NFG);
 	m_MapModels.insert(std::pair<std::string, std::shared_ptr<Model>>(name, model));
 

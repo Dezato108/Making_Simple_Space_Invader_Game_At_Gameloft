@@ -87,15 +87,12 @@ public:
 #ifdef WIN32
 
 
-#define KEY_BACK			1
-#define KEY_LEFT			1 << 1
-#define KEY_RIGHT			1 << 2 
-#define KEY_UP				1 << 3 
-#define KEY_DOWN			1 << 4 
-#define KEY_MOVE_LEFT		1 << 5 
-#define KEY_MOVE_RIGHT		1 << 6
-#define KEY_MOVE_FORWORD	1 << 7
-#define KEY_MOVE_BACKWORD	1 << 8 
+#define KEY_MOVE_LEFT		1  
+#define KEY_MOVE_RIGHT		1 << 1
+#define KEY_MOVE_FORWORD	1 << 2
+#define KEY_MOVE_BACKWORD	1 << 3
+#define KEY_SPEED_UP		1 << 4
+#define KEY_SHOOT			1 << 5
 
 //#define KEY_BACK			VK_ESCAPE
 //#define KEY_LEFT			VK_LEFT

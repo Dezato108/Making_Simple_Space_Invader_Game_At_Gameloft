@@ -11,7 +11,9 @@ enum class StateType
 	STATE_INTRO,
 	STATE_MENU,
 	STATE_PLAY,
-	STATE_CREDIT
+	STATE_CREDIT,
+	STATE_INSTRUCTION,
+	STATE_GAMEOVER,
 };
 
 class GameStateMachine : public CSingleton<GameStateMachine>
@@ -21,12 +23,10 @@ public:
 	~GameStateMachine();
 
 	void	Cleanup();
-
 	void	ChangeState(std::shared_ptr<GameStateBase> state);
 	void	ChangeState(StateType stt);
 	void	PushState(StateType stt);
 	void	PopState();
-
 	bool	isRunning() { return m_running; }
 	void	Quit() { m_running = false; }
 	void	PerformStateChange();

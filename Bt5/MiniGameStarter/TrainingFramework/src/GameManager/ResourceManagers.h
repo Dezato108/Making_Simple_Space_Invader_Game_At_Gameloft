@@ -28,19 +28,19 @@ public:
 	void RemoveFont(const std::string& name);
 
 	std::shared_ptr<Shader> GetShader(const std::string& name);
-	std::shared_ptr<Texture> GetTexture(const std::string& name);
-	std::shared_ptr<Model> GetModel(const std::string& name);
+	std::shared_ptr<Model> GetModel(const std::string& name); 
+	std::shared_ptr<Texture> GetTexture(const std::string& name);	
 	std::shared_ptr<Font> GetFont(const std::string& name);
 
 private:
 	std::map<std::string, std::shared_ptr<Shader>> m_MapShader;
-	std::map<std::string, std::shared_ptr<Texture>> m_MapTexture;
 	std::map<std::string, std::shared_ptr<Model>> m_MapModels;
+	std::map<std::string, std::shared_ptr<Texture>> m_MapTexture;
 	std::map<std::string, std::shared_ptr<Font>> m_MapFont;
 
 	std::string m_ShaderPath;
+	std::string m_ModelPath; 
 	std::string m_TexturePath;
-	std::string m_ModelsPath;
 	std::string m_FontPath;
 
 };

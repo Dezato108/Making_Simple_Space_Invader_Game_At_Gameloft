@@ -2,16 +2,16 @@
 #include "GSIntro.h"
 #include "GSMenu.h"
 */
+#include "GSInstruction.h"
 #include "GSPlay.h"
 #include "GSIntro.h"
 #include "GSMenu.h"
 #include "GSCredit.h"
 #include "GameStatebase.h"
-int GameStateBase::m_keyPressed = 0;
+#include "GSGameOver.h"
 
 GameStateBase::GameStateBase(StateType stateType) : m_stateType(stateType)
-{	
-}
+{}
 
 std::shared_ptr<GameStateBase> GameStateBase::CreateState(StateType stt)
 {
@@ -31,6 +31,12 @@ std::shared_ptr<GameStateBase> GameStateBase::CreateState(StateType stt)
 		break;
 	case StateType::STATE_CREDIT:
 		gs = std::make_shared<GSCredit>();
+		break;
+	case StateType::STATE_INSTRUCTION:
+		gs = std::make_shared<GSInstruction>();
+		break;
+	case StateType::STATE_GAMEOVER:
+		gs = std::make_shared<GSGameOver>();
 		break;
 	default:
 		break;

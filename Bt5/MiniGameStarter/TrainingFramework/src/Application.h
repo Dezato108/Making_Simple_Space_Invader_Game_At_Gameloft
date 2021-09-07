@@ -9,7 +9,7 @@ class Application : public CSingleton<Application>
 public:
 	Application();
 	~Application();
-	
+
 	void	Init();
 	void	Update(GLfloat deltaTime);
 	void	Render();

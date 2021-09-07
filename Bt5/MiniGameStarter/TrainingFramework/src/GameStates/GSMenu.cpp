@@ -23,21 +23,31 @@ void GSMenu::Init()
 	m_background = std::make_shared<Sprite2D>(model, shader, texture);
 	m_background->Set2DPosition(Globals::screenWidth / 2, Globals::screenHeight / 2);
 	m_background->SetSize(Globals::screenWidth, Globals::screenHeight);
-		
-	// title image
+
+	//gamelogo
 	texture = ResourceManagers::GetInstance()->GetTexture("gametil.tga");
-	m_timage = std::make_shared<Sprite2D>(model, shader, texture);
-	m_timage->Set2DPosition(Globals::screenWidth / 2 , Globals::screenHeight / 2 - 150);
-	m_timage->SetSize(700, 300);
-	
+	m_gameTitle = std::make_shared<Sprite2D>(model, shader, texture);
+	m_gameTitle->Set2DPosition(Globals::screenWidth / 2, Globals::screenHeight / 2 - 100);
+	m_gameTitle->SetSize(600, 280);
 
 	// play button
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_play2.tga");
 	std::shared_ptr<GameButton> button = std::make_shared<GameButton>(model, shader, texture);
-	button->Set2DPosition(Globals::screenWidth / 2, Globals::screenHeight / 2+ 150);
-	button->SetSize(200, 200);
+	button->Set2DPosition(Globals::screenWidth / 2, Globals::screenHeight - 150);
+	button->SetSize(150, 150);
 	button->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PLAY);
+		});
+	m_listButton.push_back(button);
+
+
+	// instruction button
+	texture = ResourceManagers::GetInstance()->GetTexture("q_button.tga");
+	button = std::make_shared<GameButton>(model, shader, texture);
+	button->Set2DPosition(Globals::screenWidth - 190, 50);
+	button->SetSize(50, 50);
+	button->SetOnClick([]() {
+		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_INSTRUCTION);
 		});
 	m_listButton.push_back(button);
 
@@ -45,7 +55,6 @@ void GSMenu::Init()
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_credit.tga");
 	button = std::make_shared<GameButton>(model, shader, texture);
 	button->Set2DPosition(Globals::screenWidth - 120, 50);
-	//button->Set2DPosition(Globals::screenWidth / 2, Globals::screenHeight / 2 + 180);
 	button->SetSize(50, 50);
 	button->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_CREDIT);
@@ -62,15 +71,13 @@ void GSMenu::Init()
 		});
 	m_listButton.push_back(button);
 
-	// game title
-	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
-	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("Lemon-Regular.ttf");
-	//m_textGameName = std::make_shared< Text>(shader, font, "Game Title", Vector4(1.0f, 0.5f, 0.0f, 1.0f), 3.0f);
-	m_textGameName = std::make_shared< Text>(shader, font, "Space Invader", TextColor::RED, 3.0);
-	m_textGameName->Set2DPosition(Globals::screenWidth / 2 - 300 , Globals::screenHeight / 2 - 150);
-	//m_textGameName->Set2DPosition(Vector2(200, 200));
-
-	
+	// animate image
+	/*model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
+	texture = ResourceManagers::GetInstance()->GetTexture("coin1.tga");
+	shader = ResourceManagers::GetInstance()->GetShader("AnimationShader");
+	m_coin = std::make_shared<AnimationSprite>(model, shader, texture, 6, 0.1f);
+	m_coin->Set2DPosition((float)Globals::screenWidth / 2, (float)Globals::screenHeight / 2);
+	m_coin->SetSize(150, 150);*/
 }
 
 void GSMenu::Exit()
@@ -112,6 +119,7 @@ void GSMenu::HandleMouseMoveEvents(int x, int y)
 
 void GSMenu::Update(float deltaTime)
 {
+	//m_coin->Update(deltaTime);
 	m_background->Update(deltaTime);
 	for (auto it : m_listButton)
 	{
@@ -121,11 +129,11 @@ void GSMenu::Update(float deltaTime)
 
 void GSMenu::Draw()
 {
+	//m_coin->Draw();
 	m_background->Draw();
-	m_timage->Draw();
+	m_gameTitle->Draw();
 	for (auto it : m_listButton)
 	{
 		it->Draw();
 	}
-	//m_textGameName->Draw();
 }

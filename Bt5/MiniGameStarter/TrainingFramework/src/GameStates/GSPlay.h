@@ -1,11 +1,17 @@
 #pragma once
 #include "GameStateBase.h"
-#include "Invaders.h"
+#include "Player.h"
+#include "Invader.h"
+#include "Bullet.h"
+#include "ParallelBG.h"
+#include "AnimationSprite.h"
 
+class ParallelBG;
 class Sprite2D;
 class Sprite3D;
 class Text;
 class GameButton;
+class AnimationSprite;
 
 class GSPlay :
 	public GameStateBase
@@ -26,16 +32,21 @@ public:
 	void	HandleMouseMoveEvents(int x, int y) override;
 	void	Update(float deltaTime) override;
 	void	Draw() override;
-
 	
-
 private:
-	std::shared_ptr<Sprite2D>	m_background;
-	std::shared_ptr<Sprite2D>	m_player;
-	
+	std::shared_ptr<ParallelBG>	m_background;
+	std::shared_ptr<AnimationSprite>	m_coin;
 	std::shared_ptr<Text>		m_score;
-	float m_timeline;
+	std::shared_ptr<Text>		m_highscore;
 	std::list<std::shared_ptr<GameButton>>	m_listButton;
-	std::vector<std::shared_ptr<Invaders>> m_listInvaders;
+	std::vector<std::shared_ptr<Player>> m_listPlayer;
+	std::vector<std::shared_ptr<Invader>> m_listInvaders;
+	static int m_keyPressed;
+	int m_levelboss;
+	int m_levelnormal;
+	int m_scoreNum;
+	std::string m_highscoreNum;
+	int highScoreNum;
+	bool isGameOver;
 };
 

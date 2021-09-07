@@ -2,6 +2,7 @@
 #include "GameStateBase.h"
 #include "GameButton.h"
 
+
 class GSMenu :
 	public GameStateBase
 {
@@ -24,9 +25,9 @@ public:
 
 private:
 	std::shared_ptr<Sprite2D>				m_background;
-	std::shared_ptr<Sprite2D>				m_timage;
+	std::shared_ptr<Sprite2D>				m_gameTitle;
 	std::list<std::shared_ptr<GameButton>>	m_listButton;
 	std::shared_ptr<Text>					m_textGameName;
-
+	//std::shared_ptr<AnimationSprite>				m_coin;
 };
 

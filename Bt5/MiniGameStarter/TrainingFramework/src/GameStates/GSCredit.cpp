@@ -45,7 +45,7 @@ void GSCredit::Init()
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
 	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("arcade.ttf");
 	m_text1 = std::make_shared< Text>(shader, font, "THIS GAME WAS MADE", TextColor::RED, 1.4);
-	m_text1->Set2DPosition((float)Globals::screenWidth/2 -300, (float)Globals::screenHeight / 2);
+	m_text1->Set2DPosition((float)Globals::screenWidth / 2 - 300, (float)Globals::screenHeight / 2);
 	//m_score->Set2DPosition(Vector2(5, 25));
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
 	//std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("arialbd.ttf");
