@@ -1,5 +1,6 @@
 #include "GSPlay.h"
 
+
 #include "Shader.h"
 #include "Texture.h"
 #include "Model.h"
@@ -11,6 +12,7 @@
 #include "GameButton.h"
 #include <iostream>
 #include <fstream>
+
 using namespace std;
 
 int GSPlay::m_keyPressed(0);
@@ -18,6 +20,7 @@ int GSPlay::m_keyPressed(0);
 
 GSPlay::GSPlay()
 {
+	waitTime2 = 0;
 }
 
 
@@ -28,10 +31,12 @@ GSPlay::~GSPlay()
 
 void GSPlay::Init()
 {
+	
 	highScoreNum = 0;
 	m_levelboss = 0;
 	m_levelnormal = 0;
 	m_scoreNum = 0;
+	isGameOver = false;
 	auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
 	auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
 
@@ -49,7 +54,7 @@ void GSPlay::Init()
 	// invaders
 	texture = ResourceManagers::GetInstance()->GetTexture("rsauce.tga");
 	auto invader1 = std::make_shared<Invader>(model, shader, texture);
-	invader1->Set2DPosition(1350, (float)Globals::screenHeight / 2 -200);
+	invader1->Set2DPosition((float)Globals::screenWidth+150, (float)Globals::screenHeight / 2 -200);
 	invader1->SetSize(70, 60);
 	invader1->SetType("boss");
 	invader1->SetLevelBoss(1);
@@ -75,16 +80,25 @@ void GSPlay::Init()
 		GameStateMachine::GetInstance()->PopState();
 		});
 	m_listButton.push_back(button);
-
 	
+	//Init Sound
+	
+	gSoloud.init(); // Initialize SoLoud
+	m_BGM.load("GSPlay_BGM.wav"); // Load BGM
+	m_BGM.setLooping(true);
+	m_BGM.setVolume(0.6f);
 
-	// animate image
-	/*model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
-	texture = ResourceManagers::GetInstance()->GetTexture("coin1.tga");
-	shader = ResourceManagers::GetInstance()->GetShader("AnimationShader");
-	m_coin = std::make_shared<AnimationSprite>(model, shader, texture, 6, 0.1f);
-	m_coin->Set2DPosition((float)Globals::screenWidth / 2, (float)Globals::screenHeight / 2);
-	m_coin->SetSize(150, 150);*/
+	m_hitsound.load("hitsound.wav"); // load bullet hitsound
+	m_hitsound.setVolume(0.8f);
+
+	m_invaderKilled.load("invaderkilled.wav"); // load invader kill sound
+	
+	s_playerShoot.load("shoot.wav");
+	s_playerShoot.setVolume(0.6f);
+	s_playerExplode.load("explosion.wav");
+	s_playerExplode.setVolume(0.7f);
+	gSoloud.play(m_BGM); // Play BGM
+	
 }
 
 void GSPlay::Exit()
@@ -168,7 +182,7 @@ void GSPlay::Update(float deltaTime)
 	std::string s = "Score: " + std::to_string(m_scoreNum);
 	m_score = std::make_shared< Text>(shader, font, s, TextColor::RED, 0.8);
 	m_score->Set2DPosition((float)Globals::screenWidth/2 -100 , 50);
-	isGameOver = false;
+	
 
 	//highscore
 	ifstream myReadFile("highscore.txt");
@@ -177,11 +191,11 @@ void GSPlay::Update(float deltaTime)
 	//convert string highscore to int
 	stringstream geek(m_highscoreNum);
 	geek >> highScoreNum;
-
+	
+	//update highscore (cmp with surrent score)
 	std::string s1 = "High Score: " + m_highscoreNum;
 	m_highscore = std::make_shared< Text>(shader, font, s1, TextColor::WHITE, 0.8);
 	m_highscore->Set2DPosition(20, 50);
-
 	if (highScoreNum <= m_scoreNum) {
 		ofstream myFile("highscore.txt");
 		highScoreNum = m_scoreNum;
@@ -189,8 +203,6 @@ void GSPlay::Update(float deltaTime)
 		myFile.close();
 	}
 	
-	
-
 	//handle player's movement
 	Vector3 currentPos = m_listPlayer[0]->GetPosition();
 	if (m_keyPressed & KEY_MOVE_LEFT) {
@@ -203,16 +215,17 @@ void GSPlay::Update(float deltaTime)
 	}
 	if (m_keyPressed & KEY_MOVE_RIGHT) {
 		if (m_keyPressed & KEY_SPEED_UP) {
-			if (currentPos.x <= 1150)
+			if (currentPos.x <= (float)Globals::screenWidth - 50)
 				m_listPlayer[0]->Set2DPosition(Vector2(currentPos.x + 600 * deltaTime, currentPos.y));
 		}
-		else if (currentPos.x <= 1150)
+		else if (currentPos.x <= (float)Globals::screenWidth - 50)
 			m_listPlayer[0]->Set2DPosition(Vector2(currentPos.x + 300 * deltaTime, currentPos.y));
 	}
 	static float playerShootTime = 0;
 	if (playerShootTime <= 0.5) playerShootTime += deltaTime;
 	if (m_keyPressed & KEY_SHOOT) {		
 		if (playerShootTime > 0.5) {
+			gSoloud.play(s_playerShoot);
 			m_listPlayer[0]->PlayerShootBullet();
 			playerShootTime = 0;
 		}
@@ -239,9 +252,16 @@ void GSPlay::Update(float deltaTime)
 				m_listInvaders[k]->m_listBullets.erase(m_listInvaders[k]->m_listBullets.begin() + i);
 				//GameOver when player get hit				
 				isGameOver = true;
+				// animate space ship explode
+				auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
+				auto texture = ResourceManagers::GetInstance()->GetTexture("explode.tga");
+				auto shader = ResourceManagers::GetInstance()->GetShader("AnimationShader");
+				auto m_animationExplode = std::make_shared<AnimationSprite>(model, shader, texture, 4, 0.2f);
+				m_animationExplode->Set2DPosition(m_listPlayer[0]->GetPosition().x, m_listPlayer[0]->GetPosition().y);
+				m_animationExplode->SetSize(100, 100);
+				m_listAnimation.push_back(m_animationExplode);
 			}
 		}
-
 		//invader curved bullets collision with player		
 		for (auto i = 0; i < m_listInvaders[k]->m_listCurvedBullets.size(); i++) {
 			float delta_x = m_listInvaders[k]->m_listCurvedBullets[i]->GetPosition().x - m_listPlayer[0]->GetPosition().x;
@@ -250,14 +270,15 @@ void GSPlay::Update(float deltaTime)
 				m_listInvaders[k]->m_listCurvedBullets.erase(m_listInvaders[k]->m_listCurvedBullets.begin() + i);
 				//GameOver when player get hit		
 				isGameOver = true;
+				// animate explode at player position
+				auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
+				auto texture = ResourceManagers::GetInstance()->GetTexture("explode.tga");
+				auto shader = ResourceManagers::GetInstance()->GetShader("AnimationShader");
+				auto m_animationExplode = std::make_shared<AnimationSprite>(model, shader, texture, 4, 0.2f);
+				m_animationExplode->Set2DPosition(m_listPlayer[0]->GetPosition().x, m_listPlayer[0]->GetPosition().y);
+				m_animationExplode->SetSize(100, 100);
+				m_listAnimation.push_back(m_animationExplode);
 				}
-		}		
-		if (isGameOver == true) {
-			GameStateMachine::GetInstance()->ChangeState(StateType::STATE_GAMEOVER);
-			ofstream myFile("score.txt");
-			myFile << std::to_string(m_scoreNum);
-			myFile.close();
-
 		}
 		//invader boss collision with player bullet
 		for (auto i = 0; i < m_listPlayer[0]->m_listPlayerBullets.size(); i++) {
@@ -266,17 +287,35 @@ void GSPlay::Update(float deltaTime)
 			if (abs(sqrt(delta_x * delta_x + delta_y * delta_y) < 60) & m_listInvaders[k]->GetType() == "boss") {
 				m_listInvaders[k]->SetHP(m_listInvaders[k]->GetHP() - 1);
 				m_listPlayer[0]->m_listPlayerBullets.erase(m_listPlayer[0]->m_listPlayerBullets.begin() + i);
+				
+				gSoloud.play(m_hitsound); // Play hitsound
 				if (m_listInvaders[k]->GetHP() == 0) {
+					// animate explode at invader position
+					auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
+					auto texture = ResourceManagers::GetInstance()->GetTexture("explode.tga");
+					auto shader = ResourceManagers::GetInstance()->GetShader("AnimationShader");
+					auto m_animationExplode = std::make_shared<AnimationSprite>(model, shader, texture, 4, 0.2f);
+					m_animationExplode->Set2DPosition(m_listInvaders[k]->GetPosition().x, m_listInvaders[k]->GetPosition().y);
+					m_animationExplode->SetSize(100, 100);
+					m_listAnimation.push_back(m_animationExplode);
+					gSoloud.play(m_invaderKilled);
+					// animate explode at invader's bullet position
+					for (auto i1 = 0; i1 < m_listInvaders[k]->m_listCurvedBullets.size(); i1++) {
+						auto m_animationExplode1 = std::make_shared<AnimationSprite>(model, shader, texture, 4, 0.2f);
+						m_animationExplode1->Set2DPosition(m_listInvaders[k]->m_listCurvedBullets[i1]->GetPosition().x, m_listInvaders[k]->m_listCurvedBullets[i1]->GetPosition().y);
+						m_animationExplode1->SetSize(100, 100);
+						m_listAnimation.push_back(m_animationExplode1);
+					}					
+					//
 					std::cout << "bullet kill boss invader" << "\n";
 					m_scoreNum += 4;
 					std::cout << m_scoreNum << "\n";					
 					m_listInvaders.erase(m_listInvaders.begin() + k);
-					m_levelboss += 1;
-					auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
-					auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
-					auto texture = ResourceManagers::GetInstance()->GetTexture("rsauce.tga");
+					m_levelboss += 1;					
+					shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
+					texture = ResourceManagers::GetInstance()->GetTexture("rsauce.tga");
 					auto invader1 = std::make_shared<Invader>(model, shader, texture);
-					invader1->Set2DPosition(1350, (float)Globals::screenHeight / 2 - 200);
+					invader1->Set2DPosition((float)Globals::screenWidth + 150, (float)Globals::screenHeight / 2 - 200);
 					invader1->SetSize(70, 60);
 					invader1->SetType("boss");
 					invader1->SetLevelBoss(m_levelboss);
@@ -293,15 +332,33 @@ void GSPlay::Update(float deltaTime)
 			if (abs(sqrt(delta_x2 * delta_x2 + delta_y2 * delta_y2) < 50) & m_listInvaders[k]->GetType() == "normal") {
 				m_listInvaders[k]->SetHP(m_listInvaders[k]->GetHP() - 1);
 				m_listPlayer[0]->m_listPlayerBullets.erase(m_listPlayer[0]->m_listPlayerBullets.begin() + i);
+				
+				gSoloud.play(m_hitsound); // Play hitsound
 				if (m_listInvaders[k]->GetHP() == 0) {
+					// animate explode at invader position
+					auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
+					auto texture = ResourceManagers::GetInstance()->GetTexture("explode.tga");
+					auto shader = ResourceManagers::GetInstance()->GetShader("AnimationShader");
+					auto m_animationExplode = std::make_shared<AnimationSprite>(model, shader, texture, 4, 0.2f);
+					m_animationExplode->Set2DPosition(m_listInvaders[k]->GetPosition().x, m_listInvaders[k]->GetPosition().y);
+					m_animationExplode->SetSize(100, 100);
+					m_listAnimation.push_back(m_animationExplode);
+					gSoloud.play(m_invaderKilled);
+					// animate explode at invader's bullet position
+					for (auto i1 = 0; i1 < m_listInvaders[k]->m_listBullets.size(); i1++) {
+						auto m_animationExplode1 = std::make_shared<AnimationSprite>(model, shader, texture, 4, 0.2f);
+						m_animationExplode1->Set2DPosition(m_listInvaders[k]->m_listBullets[i1]->GetPosition().x, m_listInvaders[k]->m_listBullets[i1]->GetPosition().y);
+						m_animationExplode1->SetSize(100, 100);
+						m_listAnimation.push_back(m_animationExplode1);
+					}
+					//
 					std::cout << "bullet kill normal invader" << "\n";
 					m_scoreNum += 2;
 					std::cout << m_scoreNum << "\n";					
 					m_listInvaders.erase(m_listInvaders.begin() + k);
 					m_levelnormal += 1;
-					auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
-					auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
-					auto texture = ResourceManagers::GetInstance()->GetTexture("bsauce.tga");
+					shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
+					texture = ResourceManagers::GetInstance()->GetTexture("bsauce.tga");
 					auto invader2 = std::make_shared<Invader>(model, shader, texture);
 					invader2->Set2DPosition(-150, (float)Globals::screenHeight / 2 - 100);
 					invader2->SetSize(70, 60);
@@ -316,19 +373,47 @@ void GSPlay::Update(float deltaTime)
 		
 	}
 	
+	if (isGameOver == true) {
+		gSoloud.play(s_playerExplode);
+		auto texture = ResourceManagers::GetInstance()->GetTexture("transparent.tga");
+		m_listPlayer[0]->SetTexture(texture);
+		waitTime2 += deltaTime;
+		if (waitTime2 >= 0.6) {
+			gSoloud.deinit(); // Clean up sound!
+			//change state and save score
+			GameStateMachine::GetInstance()->ChangeState(StateType::STATE_GAMEOVER);
+			ofstream myFile("score.txt");
+			myFile << std::to_string(m_scoreNum);
+			myFile.close();
+		}
+	}
+	
 	//parallelBG
 	m_background->Update(deltaTime);
-	//animate img
-	//m_coin->Update(deltaTime);
+	
 	//score update
 	m_score->Update(deltaTime);
 	m_highscore->Update(deltaTime);
+
+	//animation list
+	float animation_timer = 0;
+	animation_timer += deltaTime;
+	for (int i = 0; i < m_listAnimation.size(); i++) {
+		m_listAnimation[i]->Update(deltaTime);
+		if (animation_timer > 1) {
+			m_listAnimation.erase(m_listAnimation.begin() + 0);
+			animation_timer =0;
+		}
+	}
 }
 
 void GSPlay::Draw()
 {
 	m_background->Draw();
 	m_listPlayer[0]->Draw();
+	for (int i = 0; i < m_listAnimation.size(); i++) {
+		m_listAnimation[i]->Draw();
+	}
 	for (int i = 0; i < m_listPlayer[0]->m_listPlayerBullets.size(); i++) {
 		m_listPlayer[0]->m_listPlayerBullets[i]->Draw();
 	}
@@ -347,5 +432,5 @@ void GSPlay::Draw()
 	{
 		it->Draw();
 	}
-	//m_coin->Draw();
+	
 }

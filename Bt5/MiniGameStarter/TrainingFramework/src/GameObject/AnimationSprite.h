@@ -5,6 +5,7 @@ class AnimationSprite :
 {
 public :
     AnimationSprite();
+    ~AnimationSprite();
     AnimationSprite(std::shared_ptr<Model> model, std::shared_ptr<Shader> shader, std::shared_ptr<Texture> texture, int numFrame, float frameTime);
     void Init() override;
     void Draw() override;

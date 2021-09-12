@@ -1,29 +1,37 @@
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\vc142.pdb
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\vc142.idb
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\trainingframework.obj
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\gsplay.obj
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\gsmenu.obj
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\gsintro.obj
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\gamestatemachine.obj
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\gamestatebase.obj
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\texture.obj
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\text.obj
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\shader.obj
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\model.obj
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\sprite3d.obj
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\camera.obj
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\sprite2d.obj
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\gamebutton.obj
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\font.obj
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\resourcemanagers.obj
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\application.obj
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\trainingframework.ilk
-c:\users\admin\desktop\1 month intern\minigamestarter\bin-angle\trainingframework.exe
-c:\users\admin\desktop\1 month intern\minigamestarter\bin-angle\trainingframework.pdb
-c:\users\admin\desktop\1 month intern\minigamestarter\\bin-angle\trainingframework.pdb
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\training.fc024ec8.tlog\cl.command.1.tlog
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\training.fc024ec8.tlog\cl.read.1.tlog
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\training.fc024ec8.tlog\cl.write.1.tlog
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\training.fc024ec8.tlog\link.command.1.tlog
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\training.fc024ec8.tlog\link.read.1.tlog
-c:\users\admin\desktop\1 month intern\minigamestarter\trainingframework\debug-angle\training.fc024ec8.tlog\link.write.1.tlog
+e:\minigamestarter\trainingframework\debug-angle\vc142.pdb
+e:\minigamestarter\trainingframework\debug-angle\vc142.idb
+e:\minigamestarter\trainingframework\debug-angle\trainingframework.obj
+e:\minigamestarter\trainingframework\debug-angle\gsplay.obj
+e:\minigamestarter\trainingframework\debug-angle\gsmenu.obj
+e:\minigamestarter\trainingframework\debug-angle\gsintro.obj
+e:\minigamestarter\trainingframework\debug-angle\gamestatemachine.obj
+e:\minigamestarter\trainingframework\debug-angle\gamestatebase.obj
+e:\minigamestarter\trainingframework\debug-angle\texture.obj
+e:\minigamestarter\trainingframework\debug-angle\text.obj
+e:\minigamestarter\trainingframework\debug-angle\shader.obj
+e:\minigamestarter\trainingframework\debug-angle\model.obj
+e:\minigamestarter\trainingframework\debug-angle\sprite3d.obj
+e:\minigamestarter\trainingframework\debug-angle\camera.obj
+e:\minigamestarter\trainingframework\debug-angle\sprite2d.obj
+e:\minigamestarter\trainingframework\debug-angle\gamebutton.obj
+e:\minigamestarter\trainingframework\debug-angle\font.obj
+e:\minigamestarter\trainingframework\debug-angle\resourcemanagers.obj
+e:\minigamestarter\trainingframework\debug-angle\application.obj
+e:\minigamestarter\trainingframework\debug-angle\player.obj
+e:\minigamestarter\trainingframework\debug-angle\invader.obj
+e:\minigamestarter\trainingframework\debug-angle\bullet.obj
+e:\minigamestarter\trainingframework\debug-angle\gscredit.obj
+e:\minigamestarter\trainingframework\debug-angle\parallelbg.obj
+e:\minigamestarter\trainingframework\debug-angle\gsinstruction.obj
+e:\minigamestarter\trainingframework\debug-angle\animationsprite.obj
+e:\minigamestarter\trainingframework\debug-angle\gsgameover.obj
+e:\minigamestarter\bin-angle\trainingframework.exe
+e:\minigamestarter\trainingframework\debug-angle\trainingframework.ilk
+e:\minigamestarter\bin-angle\trainingframework.pdb
+e:\minigamestarter\\bin-angle\trainingframework.pdb
+e:\minigamestarter\trainingframework\debug-angle\training.fc024ec8.tlog\cl.command.1.tlog
+e:\minigamestarter\trainingframework\debug-angle\training.fc024ec8.tlog\cl.read.1.tlog
+e:\minigamestarter\trainingframework\debug-angle\training.fc024ec8.tlog\cl.write.1.tlog
+e:\minigamestarter\trainingframework\debug-angle\training.fc024ec8.tlog\link.command.1.tlog
+e:\minigamestarter\trainingframework\debug-angle\training.fc024ec8.tlog\link.read.1.tlog
+e:\minigamestarter\trainingframework\debug-angle\training.fc024ec8.tlog\link.write.1.tlog

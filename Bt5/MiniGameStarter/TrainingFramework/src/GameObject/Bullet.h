@@ -21,5 +21,6 @@ private:
     const int BulletSpeed = 200;
     float SpeedBulletX, SpeedBulletY;
     bool active;
+    
 };
 

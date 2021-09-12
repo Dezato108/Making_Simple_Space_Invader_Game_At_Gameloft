@@ -1,5 +1,6 @@
 #include "Bullet.h"
-
+#include "ResourceManagers.h"
+#include "AnimationSprite.h"
 
 Bullet::Bullet(std::shared_ptr<Model> model, std::shared_ptr<Shader> shader, std::shared_ptr<Texture> texture)
 	: Sprite2D(model, shader, texture)
@@ -36,7 +37,7 @@ void Bullet::setTarget(Vector3 target)
 
 bool Bullet::checkIsActive()
 {
-	if (GetPosition().y > 800 || GetPosition().y < -10) {
+	if (GetPosition().y > (float)Globals::screenWidth + 100 || GetPosition().y < -10) {
 		active = false;
 	}
 	return active;

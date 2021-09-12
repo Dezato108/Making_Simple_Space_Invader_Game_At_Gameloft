@@ -1,6 +1,8 @@
 #pragma once
 #include "GameStateBase.h"
 #include "ResourceManagers.h"
+#include "soloud.h"
+#include "soloud_wav.h"
 class Sprite2D;
 class Sprite3D;
 class Text;
@@ -34,5 +36,8 @@ private:
 	std::list<std::shared_ptr<GameButton>>	m_listButton;
 	std::string m_scoreNum;
 	std::string m_highScoreNum;
+	SoLoud::Soloud gSoloud; // SoLoud engine
+	SoLoud::Wav m_gameOverBGM;      // BGM
+	int handle;
 };
 

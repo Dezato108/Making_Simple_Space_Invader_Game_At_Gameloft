@@ -15,6 +15,13 @@ GSMenu::~GSMenu()
 
 void GSMenu::Init()
 {
+	//init sound
+	gSoloud.init(); // Initialize SoLoud
+	m_titleBGM.load("titleBGM.wav");
+	m_titleBGM.setLooping(true);
+	gSoloud.play(m_titleBGM); // Play BGM
+	handle = gSoloud.play(m_titleBGM);
+
 	auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
 	auto texture = ResourceManagers::GetInstance()->GetTexture("bg.tga");
 
@@ -33,10 +40,10 @@ void GSMenu::Init()
 	// play button
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_play2.tga");
 	std::shared_ptr<GameButton> button = std::make_shared<GameButton>(model, shader, texture);
-	button->Set2DPosition(Globals::screenWidth / 2, Globals::screenHeight - 150);
+	button->Set2DPosition(Globals::screenWidth / 2, Globals::screenHeight/2 + 150);
 	button->SetSize(150, 150);
 	button->SetOnClick([]() {
-		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PLAY);
+		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PLAY);		
 		});
 	m_listButton.push_back(button);
 
@@ -50,7 +57,7 @@ void GSMenu::Init()
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_INSTRUCTION);
 		});
 	m_listButton.push_back(button);
-
+	
 	// credit button
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_credit.tga");
 	button = std::make_shared<GameButton>(model, shader, texture);
@@ -58,6 +65,7 @@ void GSMenu::Init()
 	button->SetSize(50, 50);
 	button->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_CREDIT);
+		
 		});
 	m_listButton.push_back(button);
 
@@ -71,13 +79,7 @@ void GSMenu::Init()
 		});
 	m_listButton.push_back(button);
 
-	// animate image
-	/*model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
-	texture = ResourceManagers::GetInstance()->GetTexture("coin1.tga");
-	shader = ResourceManagers::GetInstance()->GetShader("AnimationShader");
-	m_coin = std::make_shared<AnimationSprite>(model, shader, texture, 6, 0.1f);
-	m_coin->Set2DPosition((float)Globals::screenWidth / 2, (float)Globals::screenHeight / 2);
-	m_coin->SetSize(150, 150);*/
+	
 }
 
 void GSMenu::Exit()
@@ -108,6 +110,7 @@ void GSMenu::HandleTouchEvents(int x, int y, bool bIsPressed)
 	{
 		if (button->HandleTouchEvents(x, y, bIsPressed))
 		{
+			gSoloud.setPauseAll(true);
 			break;
 		}
 	}
@@ -119,21 +122,23 @@ void GSMenu::HandleMouseMoveEvents(int x, int y)
 
 void GSMenu::Update(float deltaTime)
 {
-	//m_coin->Update(deltaTime);
+	
 	m_background->Update(deltaTime);
+	if (gSoloud.getPause(handle)) handle = gSoloud.play(m_titleBGM);
 	for (auto it : m_listButton)
 	{
 		it->Update(deltaTime);
+		
 	}
 }
 
 void GSMenu::Draw()
 {
-	//m_coin->Draw();
-	m_background->Draw();
+	m_background->Draw();	
 	m_gameTitle->Draw();
 	for (auto it : m_listButton)
 	{
 		it->Draw();
 	}
+	
 }

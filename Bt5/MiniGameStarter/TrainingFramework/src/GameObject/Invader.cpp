@@ -53,7 +53,7 @@ void Invader::Move(float deltaTime)
 	if (GetPosition().x < 49) {
 		Set2DPosition(GetPosition().x + 100 * deltaTime, GetPosition().y);
 	}
-	if (GetPosition().x >1150) moveRight = false;
+	if (GetPosition().x > Globals::screenWidth-50) moveRight = false;
 	else if(GetPosition().x < 50) moveRight = true;
 
 	if (moveRight) {
@@ -70,10 +70,10 @@ void Invader::Move2(float deltaTime)
 		Set2DPosition(GetPosition().x, GetPosition().y - 100 * deltaTime);
 	}*/
 	static bool moveRight = true;
-	if (GetPosition().x > 1151) {
+	if (GetPosition().x > Globals::screenWidth - 49) {
 		Set2DPosition(GetPosition().x - 100 * deltaTime, GetPosition().y);
 	}
-	if (GetPosition().x > 1150) moveRight = false;
+	if (GetPosition().x > Globals::screenWidth - 50) moveRight = false;
 	else if (GetPosition().x < 50) moveRight = true;
 
 	if (moveRight) {

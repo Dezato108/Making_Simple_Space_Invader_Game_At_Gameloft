@@ -10,7 +10,6 @@ public:
     ~Player();
     void Update(float deltaTime);
     void PlayerShootBullet();
-    //void Draw();
     std::vector<std::shared_ptr<Bullet>> m_listPlayerBullets;
 private:
     

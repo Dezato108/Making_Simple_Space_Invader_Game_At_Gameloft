@@ -8,8 +8,12 @@
 AnimationSprite::AnimationSprite() : m_numFrames(0) ,m_currentFrame(0), m_frameTime(0.0f), m_currentFrameTime(0.0f)
 {}
 
+AnimationSprite::~AnimationSprite()
+{
+}
+
 AnimationSprite::AnimationSprite(std::shared_ptr<Model> model, std::shared_ptr<Shader> shader, std::shared_ptr<Texture> texture, int numFrame, float frameTime)
-	: Sprite2D(model, shader, texture), m_numFrames(0), m_currentFrame(0), m_frameTime(0.0f), m_currentFrameTime(0.0f)
+	: Sprite2D(model, shader, texture), m_numFrames(numFrame), m_currentFrame(0), m_frameTime(frameTime), m_currentFrameTime(0.0f)
 {
 	Init();
 }
@@ -84,24 +88,31 @@ void AnimationSprite::Draw()
 	if (iTempShaderVaribleGLID != -1)
 		glUniform1f(iTempShaderVaribleGLID, m_currentFrame);
 
-
-
 	glDrawElements(GL_TRIANGLES, m_pModel->GetNumIndiceObject(), GL_UNSIGNED_INT, 0);
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 	glBindTexture(GL_TEXTURE_2D, 0);
-	//std::cout << "draw" << "\n";
 }
 
 void AnimationSprite::Update(GLfloat deltaTime)
 {
-	m_currentFrameTime += deltaTime;
+	//animation loop
+	/*m_currentFrameTime += deltaTime;
 	if (m_currentFrameTime >= m_frameTime) {
 		m_currentFrame++;
 		if (m_currentFrame >= m_numFrames) m_currentFrame = 0;
 		m_currentFrameTime -= m_frameTime;
+	}*/
+
+	//animation end when all frame are showed
+	m_currentFrameTime += deltaTime;
+	if (m_currentFrameTime >= m_frameTime) {
+		m_currentFrame++;
+		//if (m_currentFrame >= m_numFrames) m_currentFrame = 0;
+		m_currentFrameTime -= m_frameTime;
 	}
+	
 }
 
 

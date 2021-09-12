@@ -3,8 +3,8 @@
 #include "Application.h"
 #include "utilities.h" 
 
-int Globals::screenWidth = 1200;
-int Globals::screenHeight = 600;
+int Globals::screenWidth = 1280;
+int Globals::screenHeight = 768;
 
 GLint Init(ESContext* esContext)
 {

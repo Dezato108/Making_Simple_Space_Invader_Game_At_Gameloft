@@ -24,10 +24,10 @@ void GSInstruction::Init()
 	m_background->Set2DPosition(Globals::screenWidth / 2, Globals::screenHeight / 2);
 	m_background->SetSize(Globals::screenWidth, Globals::screenHeight);
 
-	//gamelogo
+	//keyboard
 	texture = ResourceManagers::GetInstance()->GetTexture("kiboard.tga");
 	m_kiboard = std::make_shared<Sprite2D>(model, shader, texture);
-	m_kiboard->Set2DPosition(Globals::screenWidth / 2, Globals::screenHeight-200);
+	m_kiboard->Set2DPosition(Globals::screenWidth / 2, Globals::screenHeight/2+100);
 	m_kiboard->SetSize(800, 800);
 
 	// exit button

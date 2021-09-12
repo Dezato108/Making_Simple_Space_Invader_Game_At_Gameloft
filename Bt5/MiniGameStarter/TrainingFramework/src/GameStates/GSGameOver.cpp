@@ -25,6 +25,12 @@ GSGameOver::~GSGameOver()
 
 void GSGameOver::Init()
 {
+	gSoloud.init(); // Initialize SoLoud
+	m_gameOverBGM.load("gameover.wav");
+	//m_gameOverBGM.setLooping(true);
+	gSoloud.play(m_gameOverBGM); // Play the wave
+	handle= gSoloud.play(m_gameOverBGM);
+
 	auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
 	auto texture = ResourceManagers::GetInstance()->GetTexture("bg.tga");
 
@@ -45,8 +51,8 @@ void GSGameOver::Init()
 	std::shared_ptr<GameButton>  button = std::make_shared<GameButton>(model, shader, texture);
 	button->Set2DPosition(Globals::screenWidth /2, Globals::screenHeight /2 + 150);
 	button->SetSize(150, 150);
-	button->SetOnClick([]() {
-		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_MENU);
+	button->SetOnClick([]() {		
+		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_MENU);		
 		});
 	m_listButton.push_back(button);
 
@@ -94,6 +100,7 @@ void GSGameOver::HandleTouchEvents(int x, int y, bool bIsPressed)
 	{
 		if (button->HandleTouchEvents(x, y, bIsPressed))
 		{
+			gSoloud.setPauseAll(true);
 			break;
 		}
 	}
@@ -105,6 +112,8 @@ void GSGameOver::HandleMouseMoveEvents(int x, int y)
 
 void GSGameOver::Update(float deltaTime)
 {
+	if (gSoloud.getPause(handle)) handle = gSoloud.play(m_gameOverBGM);
+
 	for (auto it : m_listButton)
 	{
 		it->Update(deltaTime);

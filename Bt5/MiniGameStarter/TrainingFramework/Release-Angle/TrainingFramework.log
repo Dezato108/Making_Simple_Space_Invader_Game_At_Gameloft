@@ -1,0 +1,139 @@
+﻿  Application.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xutility(158,77): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2029): message : see reference to function template instantiation 'void std::_Construct_in_place<_Ty,int,int,int&,int,int&,float,float,float>(_Ty &,int &&,int &&,int &,int &&,int &,float &&,float &&,float &&) noexcept(false)' being compiled
+          with
+          [
+              _Ty=Camera
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2748): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<int,int,int&,int,int&,float,float,float>(int &&,int &&,int &,int &&,int &,float &&,float &&,float &&)' being compiled
+          with
+          [
+              _Ty=Camera
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2748): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<int,int,int&,int,int&,float,float,float>(int &&,int &&,int &,int &&,int &,float &&,float &&,float &&)' being compiled
+          with
+          [
+              _Ty=Camera
+          ]
+E:\MiniGameStarter\TrainingFramework\src\Application.cpp(21): message : see reference to function template instantiation 'std::shared_ptr<Camera> std::make_shared<Camera,int,int,int&,int,int&,float,float,float>(int &&,int &&,int &,int &&,int &,float &&,float &&,float &&)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xutility(158,77): warning C4244: 'argument': conversion from '_Ty' to 'GLfloat', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+  Bullet.cpp
+  Invader.cpp
+E:\MiniGameStarter\TrainingFramework\src\GameObject\Invader.cpp(112,20): warning C4018: '<': signed/unsigned mismatch
+E:\MiniGameStarter\TrainingFramework\src\GameObject\Invader.cpp(113,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameObject\Invader.cpp(118,20): warning C4018: '<': signed/unsigned mismatch
+  GSGameOver.cpp
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSGameOver.cpp(46,85): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSGameOver.cpp(46,54): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSGameOver.cpp(52,74): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSGameOver.cpp(52,45): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xutility(158,77): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2029): message : see reference to function template instantiation 'void std::_Construct_in_place<_Ty,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,TextColor,double>(_Ty &,std::shared_ptr<Shader> &,std::shared_ptr<Font> &,std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&,TextColor &&,double &&) noexcept(false)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2748): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<std::shared_ptr<Shader>&,std::shared_ptr<Font>&,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&,TextColor &&,double &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2748): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<std::shared_ptr<Shader>&,std::shared_ptr<Font>&,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&,TextColor &&,double &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSGameOver.cpp(68): message : see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&,TextColor &&,double &&)' being compiled
+  GSInstruction.cpp
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSInstruction.cpp(24,78): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSInstruction.cpp(24,51): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSInstruction.cpp(30,76): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSInstruction.cpp(30,48): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSInstruction.cpp(36,45): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xutility(158,77): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2029): message : see reference to function template instantiation 'void std::_Construct_in_place<_Ty,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,const char(&)[5],TextColor,int>(_Ty &,std::shared_ptr<Shader> &,std::shared_ptr<Font> &,const char (&)[5],TextColor &&,int &&) noexcept(false)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2748): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<std::shared_ptr<Shader>&,std::shared_ptr<Font>&,const char(&)[5],TextColor,int>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,const char (&)[5],TextColor &&,int &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2748): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<std::shared_ptr<Shader>&,std::shared_ptr<Font>&,const char(&)[5],TextColor,int>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,const char (&)[5],TextColor &&,int &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSInstruction.cpp(46): message : see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,const char(&)[5],TextColor,int>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,const char (&)[5],TextColor &&,int &&)' being compiled
+  GSMenu.cpp
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSMenu.cpp(31,78): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSMenu.cpp(31,51): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSMenu.cpp(37,81): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSMenu.cpp(37,50): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSMenu.cpp(43,74): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSMenu.cpp(43,45): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSMenu.cpp(54,45): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSMenu.cpp(64,45): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSMenu.cpp(75,45): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  GSPlay.cpp
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(77,45): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(243,21): warning C4018: '<': signed/unsigned mismatch
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(248,22): warning C4018: '<': signed/unsigned mismatch
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(266,22): warning C4018: '<': signed/unsigned mismatch
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(284,22): warning C4018: '<': signed/unsigned mismatch
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(287,93): warning C4805: '&': unsafe mix of type 'int' and type 'bool' in operation
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(303,27): warning C4018: '<': signed/unsigned mismatch
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(329,22): warning C4018: '<': signed/unsigned mismatch
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(332,97): warning C4805: '&': unsafe mix of type 'int' and type 'bool' in operation
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(348,27): warning C4018: '<': signed/unsigned mismatch
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(401,20): warning C4018: '<': signed/unsigned mismatch
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(414,20): warning C4018: '<': signed/unsigned mismatch
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(417,20): warning C4018: '<': signed/unsigned mismatch
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(420,20): warning C4018: '<': signed/unsigned mismatch
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(422,23): warning C4018: '<': signed/unsigned mismatch
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(425,23): warning C4018: '<': signed/unsigned mismatch
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xutility(158,77): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2029): message : see reference to function template instantiation 'void std::_Construct_in_place<_Ty,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,std::string&,TextColor,double>(_Ty &,std::shared_ptr<Shader> &,std::shared_ptr<Font> &,std::string &,TextColor &&,double &&) noexcept(false)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2748): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<std::shared_ptr<Shader>&,std::shared_ptr<Font>&,std::string&,TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,std::string &,TextColor &&,double &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2748): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<std::shared_ptr<Shader>&,std::shared_ptr<Font>&,std::string&,TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,std::string &,TextColor &&,double &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+E:\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(183): message : see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,std::string&,TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,std::string &,TextColor &&,double &&)' being compiled
+  GameStateBase.cpp
+  TrainingFramework.cpp
+soloud_static.lib(soloud_core_setters.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+LINK : warning LNK4098: defaultlib 'LIBCMTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  13 of 1855 functions ( 0.7%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    12 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  TrainingFramework.vcxproj -> E:\MiniGameStarter\BIN-Angle\TrainingFramework.exe

@@ -1,1 +1,7 @@
-﻿  Utilities.vcxproj -> E:\MiniGameStarter\Lib\Angle\UtilitiesD.lib
+﻿  esShader.cpp
+  esUtil.cpp
+  esUtil_win.cpp
+  CMath.cpp
+  TGA.cpp
+  Generating Code...
+  Utilities.vcxproj -> E:\MiniGameStarter\Lib\Angle\UtilitiesD.lib

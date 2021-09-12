@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="SoLoud">
+      <UniqueIdentifier>{2ddb0572-78d1-40ed-9d06-cb6b3ff82be1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\soloud20200207\contrib\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin">
+      <Filter>SoLoud</Filter>
+    </None>
+    <None Include="..\soloud20200207\contrib\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin">
+      <Filter>SoLoud</Filter>
+    </None>
+    <None Include="..\soloud20200207\doc\soloud.html">
+      <Filter>SoLoud</Filter>
+    </None>
+    <None Include="..\soloud20200207\src\audiosource\speech\Elements.def">
+      <Filter>SoLoud</Filter>
+    </None>
+    <None Include="..\soloud20200207\src\c_api\soloud.def">
+      <Filter>SoLoud</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\soloud20200207\contrib\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\contrib\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\contrib\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\android\jni\main.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\common\glew\GL\glew.c">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\common\imgui\imgui.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\common\imgui\imgui_demo.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\common\imgui\imgui_draw.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\common\soloud_demo_framework.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\c_test\main.c">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\enumerate\main.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\env\main.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\megademo\3dtest.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\megademo\annex.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\megademo\filterfolio.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\megademo\main.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\megademo\mixbusses.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\megademo\monotone.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\megademo\multimusic.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\megademo\pewpew.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\megademo\radiogaga.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\megademo\space.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\megademo\speakers.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\megademo\speechfilter.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\megademo\tedsid.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\megademo\thebutton.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\megademo\virtualvoices.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\megademo\wavformats.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\null\main.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\piano\main.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\piano\RtMidi.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\piano\soloud_basicwave.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\piano\soloud_padsynth.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\simplest\main.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\demos\welcome\main.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\monotone\soloud_monotone.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\noise\soloud_noise.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\openmpt\soloud_openmpt.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\openmpt\soloud_openmpt_dll.c">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\sfxr\soloud_sfxr.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\speech\darray.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\speech\klatt.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\speech\resonator.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\speech\soloud_speech.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\speech\tts.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\tedsid\sid.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\tedsid\soloud_tedsid.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\tedsid\ted.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\vic\soloud_vic.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\vizsn\soloud_vizsn.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\wav\dr_impl.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\wav\soloud_wav.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\wav\soloud_wavstream.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\audiosource\wav\stb_vorbis.c">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\alsa\soloud_alsa.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\coreaudio\soloud_coreaudio.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\jack\soloud_jack.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\miniaudio\soloud_miniaudio.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\nosound\soloud_nosound.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\null\soloud_null.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\openal\soloud_openal.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\openal\soloud_openal_dll.c">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\opensles\soloud_opensles.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\oss\soloud_oss.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\portaudio\soloud_portaudio.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\portaudio\soloud_portaudio_dll.c">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\sdl\soloud_sdl1.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\sdl\soloud_sdl1_dll.c">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\sdl\soloud_sdl2.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\sdl\soloud_sdl2_dll.c">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\sdl2_static\soloud_sdl2_static.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\sdl_static\soloud_sdl_static.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\vita_homebrew\soloud_vita_homebrew.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\wasapi\soloud_wasapi.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\winmm\soloud_winmm.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\backend\xaudio2\soloud_xaudio2.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud_audiosource.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud_bus.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud_core_3d.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud_core_basicops.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud_core_faderops.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud_core_filterops.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud_core_getters.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud_core_setters.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud_core_voicegroup.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud_core_voiceops.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud_fader.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud_fft.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud_fft_lut.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud_file.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud_filter.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud_misc.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud_queue.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\core\soloud_thread.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\c_api\soloud_c.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\filter\soloud_bassboostfilter.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\filter\soloud_biquadresonantfilter.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\filter\soloud_dcremovalfilter.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\filter\soloud_echofilter.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\filter\soloud_fftfilter.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\filter\soloud_flangerfilter.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\filter\soloud_freeverbfilter.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\filter\soloud_lofifilter.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\filter\soloud_robotizefilter.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\filter\soloud_waveshaperfilter.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\tools\codegen\main.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\tools\lutgen\main.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\tools\resamplerlab\main.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\tools\resamplerlab\stb_image_write.c">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\tools\sanity\sanity.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\tools\tedsid2dump\cbmtune.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\tools\tedsid2dump\cpu.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\tools\tedsid2dump\main.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\tools\tedsid2dump\sid.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\tools\tedsid2dump\tedmem.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\tools\tedsid2dump\tedplay.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+    <ClCompile Include="..\soloud20200207\src\tools\tedsid2dump\tedsound.cpp">
+      <Filter>SoLoud</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\soloud20200207\contrib\out\build\x64-Debug\CMakeFiles\ShowIncludes\foo.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\demos\common\glew\GL\glew.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\demos\common\glew\GL\glxew.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\demos\common\glew\GL\wglew.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\demos\common\imgui\imconfig.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\demos\common\imgui\imgui.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\demos\common\imgui\imgui_internal.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\demos\common\imgui\stb_rect_pack.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\demos\common\imgui\stb_textedit.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\demos\common\imgui\stb_truetype.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\demos\common\soloud_demo_framework.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\demos\common\stb_image.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\demos\piano\RtMidi.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\demos\piano\soloud_basicwave.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\demos\piano\soloud_padsynth.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_audiosource.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_bassboostfilter.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_biquadresonantfilter.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_bus.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_c.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_dcremovalfilter.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_echofilter.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_error.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_fader.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_fft.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_fftfilter.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_file.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_file_hack_off.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_file_hack_on.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_filter.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_flangerfilter.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_freeverbfilter.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_internal.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_lofifilter.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_misc.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_monotone.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_noise.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_openmpt.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_queue.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_robotizefilter.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_sfxr.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_speech.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_tedsid.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_thread.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_vic.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_vizsn.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_wav.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_waveshaperfilter.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\include\soloud_wavstream.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\audiosource\speech\darray.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\audiosource\speech\klatt.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\audiosource\speech\resonator.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\audiosource\speech\tts.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\audiosource\tedsid\sid.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\audiosource\tedsid\ted.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\audiosource\wav\dr_flac.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\audiosource\wav\dr_mp3.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\audiosource\wav\dr_wav.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\audiosource\wav\stb_vorbis.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\backend\miniaudio\miniaudio.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\tools\resamplerlab\stb_image_write.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\tools\tedsid2dump\cbmtune.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\tools\tedsid2dump\cpu.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\tools\tedsid2dump\cpu7501asm.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\tools\tedsid2dump\mem.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\tools\tedsid2dump\psid.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\tools\tedsid2dump\roms.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\tools\tedsid2dump\sid.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\tools\tedsid2dump\tedmem.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\tools\tedsid2dump\tedplay.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+    <ClInclude Include="..\soloud20200207\src\tools\tedsid2dump\types.h">
+      <Filter>SoLoud</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
